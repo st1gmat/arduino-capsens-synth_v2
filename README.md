@@ -1,2 +1,2 @@
-# arduino-synth_v2
-arduino project
+#Сенсорный синтезатор на ArduinoUNO
+#№Описание
