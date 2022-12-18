@@ -166,6 +166,9 @@ while True:
     checkSerialPort()
     dataCanvas.config(scrollregion=dataCanvas.bbox("all"))
 ```
+В итоге должно получиться так:
+![image](https://user-images.githubusercontent.com/97258310/208325030-500cc474-c286-4327-96ee-2444472383d0.png)
+
 
 
 
