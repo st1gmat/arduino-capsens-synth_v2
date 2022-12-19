@@ -35,7 +35,7 @@
     if (++mode >= MODE_AM) mode = 0;
   }
 ```
-Предваритель в void loop() данные с сенсоров записываются в массив:
+Предварительно в void loop() данные с сенсоров записываются в массив:
 ```c++
   long total[7];
   int idx = 0;
@@ -48,7 +48,7 @@
   long total6 =  cs_2_8.capacitiveSensor(3000); total[idx++] = total6; 
   long total7 =  cs_2_9.capacitiveSensor(3000); total[idx++] = total7; 
 ```
-Далее в switch относительно состояние мода(номера нажатия на кнопку), массив с данными передается в нужную нам функцию:
+Далее в switch, относительно состояние мода(номера нажатия на кнопку), массив с данными передается в нужную нам функцию:
 ```c++
   switch (mode) { //режим воспроизведения звука
       case 0: octave_small(total);
@@ -65,7 +65,7 @@
     if (total1<=500  &  total2<=500  &  total3<=500 & total4<=500  &  total5<=500  &  total6<=500 &  total7<=500/* &  total8<=500*/)
       noTone(speaker);
 ```
-В функции через **tone()** воспроизводится нота соответсвующая проводу + в serial port выводится сама нота, которую можно считать через DataFromArduino.py:
+В функции через **tone()** воспроизводится нота соответсвующая проводу + в serial port выводится сама нота, которая считывается через DataFromArduino.py:
 ```c++
 void octave_small(long total[]) { // МАЛАЯ ОКТАВА
   // Serial.println("\nsmall octave!\n");
