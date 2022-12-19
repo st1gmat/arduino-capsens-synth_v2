@@ -138,7 +138,7 @@ dataCanvas.config(yscrollcommand = vsb.set)
 dataFrame = Frame(dataCanvas, bg="white")
 dataCanvas.create_window((10,0),window=dataFrame,anchor='nw')
 ```
-Создаем функцию, которая позволит нам циклически проверять наличие новых данных от нашего Arduino:
+Создаем функцию, которая позволит нам в цикле проверять наличие новых данных от нашего Arduino:
 ```python
 def checkSerialPort():
     if serialObj.isOpen() and serialObj.in_waiting:
