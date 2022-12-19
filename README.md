@@ -126,7 +126,7 @@ Tkinter Canvas с выводом данных получаемых от Arduino:
 dataCanvas = Canvas(root, width=600, height=400, bg='white')
 dataCanvas.grid(row=0, column=1, rowspan=100)
 ```
-Решил сделать scrollbar, чтобы, если окно данных выходит за пределы окна GUI, мы могли прокрутить его до самого низа, чтобы увидеть новые данные:
+Решил сделать scrollbar, чтобы если окно данных выходит за пределы окна GUI, мы могли прокрутить его до самого низа, чтобы увидеть новые данные:
 ```python
 vsb = Scrollbar(root, orient='vertical', command=dataCanvas.yview)
 vsb.grid(row=0, column=2, rowspan=100, sticky='ns')
